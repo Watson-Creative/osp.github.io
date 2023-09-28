@@ -1,0 +1,7 @@
+name: osp
+recipe: lamp
+services:
+  database: disabled
+config:
+  php: '8.0'
+  webroot: .
