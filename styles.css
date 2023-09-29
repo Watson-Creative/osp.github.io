@@ -30,6 +30,7 @@ header.or-header, .or-page-title, .or-show-if-side-navigation, .helpfulPoll, #Or
 }
 .or-navbar, .or-navbar-search-wrapper {
     background-color: #25294F !important;
+    /* background-color: #2A2E5C !important; */
 }
 #main {
     width: 100vw;
