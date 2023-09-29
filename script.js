@@ -13,11 +13,11 @@
     ’https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,‘script’,‘dataLayer’,‘GTM-T8JZT2G2’);</script>
 <!-- Video Player -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var video = document.getElementById('ospVideo');
-    video.autoplay = true;
-    video.muted = true;
-    video.loop = true;
-});
-</script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('ospVideo');
+        video.autoplay = true;
+        video.muted = true;
+        video.loop = true;
+    });
+    </script>

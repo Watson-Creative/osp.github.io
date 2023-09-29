@@ -1,0 +1,193 @@
+/** GLOBAL OVERRIDE **/
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #FFFEFE !important;
+        }
+    video::-webkit-media-controls-panel {
+        display: none !important;
+        opacity: 0 !important;
+    }
+    header.or-header, .or-page-title, .or-show-if-side-navigation, .helpfulPoll, #OregonSideNavigation {
+        display: none !important;
+        }
+    .row, .col-md-12, .col-md-9, .col-md-6, .col-md-3, .col-md-2, .col-md-1 {
+        margin: 0 !important;
+        padding: 0 !important;
+    border: none !important;
+        }
+    .col-md-9 {
+        width: 100vw !important;
+        }
+    .or-navbar, .or-navbar-search-wrapper {
+        background-color: #25294F !important;
+        }
+    #main {
+        width: 100vw;
+        margin: 0 !important;
+        padding: 0 !important;
+        }
+    .container {
+        width: 100vw !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        }
+    footer {
+        box-shadow: none !important;
+        padding: 0 !important;
+        background-color: #25294F !important;
+        }
+    main a, footer a, .alert a {
+        color: #ADA076 !important;
+        text-decoration: none !important;
+        }
+    h3, footer li {
+        color: #DEDEDE !important;
+        }
+/* GENERAL CSS */
+    .fullwidth {
+        display: flex !important;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        }
+    button {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        font-size: 125%;
+        width: 200px;
+        padding: 12px 24px;
+        color: #000000;
+        background-color: #f2b827;
+        border: none;
+        cursor: pointer;
+    }
+    button.serv {
+        background-color: #92A5BA !important;
+        color: #25294F !important;
+    }
+    .flexbox {
+        display: flex;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+/* HEADER */
+    .applythelaw {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+        height: calc(100vh - 130px);
+        margin: 0;
+        padding: 0;
+        z-index: 1;
+    }
+    .applythelaw .bg-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+    .applythelaw .bg-container img {
+        min-width: 100%;
+        min-height: 100%;
+        max-width: none;
+        max-height: none;
+        display: block;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    .applythelaw .text {
+        width: 600px;
+        margin-left: 275px;
+    }
+    .applythelaw .video {
+        width: calc(100% - 700px);
+    }
+    .applythelaw h1 {
+        font-family: 'Roboto Serif', Times, serif;
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 65px;
+        text-align: left;
+        margin: 0;
+        color: #FFFEFE;
+    }
+    .applythelaw h1 span {
+        color: #F2B827;
+    }
+    .applythelaw p {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: #DEDEDE;
+        margin: 35px 0 70px 0;
+        width: 80%;
+    }
+    .applythelaw .video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }  
+    .applythelaw .video video {
+        width: 100%;
+        object-fit: cover;
+        border: none;
+    }
+    /* An Exceptional Force Seeking Exceptional Cadets */
+    .exceptional {
+        padding: 100px 50px 100px 50px;
+    }
+    .exceptional h2 {
+        font-family: 'Roboto Serif', Times, serif;
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 65px;
+        text-align: left;
+        letter-spacing: 0px;
+        color: #25294F;
+    }
+    .exceptional p {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        letter-spacing: 0px;
+        color: #000001;
+    }
+
+
+
+
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+        .flexbox {
+            flex-direction: column;
+        }
+    
+        .applythelaw .text, .applythelaw .video {
+            width: 90%;
+            margin: 0 5%;
+        }
+    }    
