@@ -16,7 +16,7 @@
     </div>
 </header>
 <section class="exceptional">
-    <div class="flexbox">
+    <div class="flexbox" style="gap: 128px;">
         <div>
             <img class="osp_bike" src="https://raw.githubusercontent.com/Watson-Creative/osp.github.io/main/img/osp_bike.png" alt="An Exceptional Force Seeking Exceptional Cadets"/>
         </div>
@@ -80,6 +80,7 @@
 </section>
 <!-- STYLING -->
 <link rel="stylesheet" href="styles.css" async>
+<!-- STYLING -->
 <link rel="preconnect" href="https://fonts.googleapis.com" async>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin async>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Serif:opsz,wght@8..144,700&display=swap" rel="stylesheet" async>
@@ -100,10 +101,22 @@ j=d.createElement(s),dl=l!=‘dataLayer’?‘&l=‘+l:‘’;j.async=true;j.src
 <!-- Video Player -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://raw.githubusercontent.com/Watson-Creative/osp.github.io/main/styles.css';
+        document.head.appendChild(link);
     var video = document.getElementById('ospVideo');
-    video.autoplay = true;
-    video.muted = true;
-    video.loop = true;
-    video.play();
+        video.autoplay = true;
+        video.muted = true;
+        video.loop = true;
+        video.play();
+    // // Select all the elements with .exceptional .flexbox
+    // var elements = document.querySelectorAll('.exceptional .flexbox');
+    
+    // // Loop through the NodeList and apply the style to each element
+    // elements.forEach(function(element) {
+    //     element.style.gap = '128px';
+    // });
 });
 </script>
