@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var isIE = /*@cc_on!@*/false || !!document.documentMode;
     
     // Assume MP4 source by default and apply styles
-    var applyStyles = false;
+    var applyStyles = true;
     
     if(isSafari || isChrome) {
         video.src = 'https://storage.googleapis.com/osp-video/OSP_apply_the_law-1580x1080_hvec.mp4';
@@ -33,19 +33,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Apply inline styles to the elements with class '.applythelaw' only if applyStyles is true
-    if(applyStyles) {
-        var applyTheLawElements = document.querySelectorAll('.applythelaw');
-        applyTheLawElements.forEach(function(element) {
-            element.style.backgroundImage = 'url(https://storage.googleapis.com/osp-video/img/applythelaw_bg.png)';
-            element.style.backgroundPosition = 'bottom center';
-            element.style.backgroundSize = 'contain';
-        });
-    }
+    // if(applyStyles) {
+        // var applyTheLawElements = document.querySelectorAll('.applythelaw');
+        // applyTheLawElements.forEach(function(element) {
+        //     element.style.backgroundImage = 'url(https://storage.googleapis.com/osp-video/img/applythelaw_bg.png)';
+        //     element.style.backgroundPosition = 'bottom center';
+        //     element.style.backgroundSize = 'cover';
+        // });
+    // }
     
     // Apply inline style to body and html
     document.body.style.overflowX = 'hidden';
     document.documentElement.style.overflowX = 'hidden'; // html
     
+    var applyTheLawElements = document.querySelectorAll('.applythelaw');
+    applyTheLawElements.forEach(function(element) {
+        element.style.backgroundImage = 'url(https://storage.googleapis.com/osp-video/img/applythelaw_bg.png)';
+        element.style.backgroundPosition = 'bottom center';
+        element.style.backgroundSize = 'cover';
+    });
+
     var exceptionalElements = document.querySelectorAll('.exceptional .flexbox');
     exceptionalElements.forEach(function(element) {
         element.style.gap = '128px';
@@ -62,6 +69,4 @@ document.addEventListener('DOMContentLoaded', function() {
     video.load(); // Important: load the video again after changing source
     video.play();
 });
-
-
 //</script>

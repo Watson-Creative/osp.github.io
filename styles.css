@@ -101,11 +101,11 @@ button.btn-hack.serv {
     z-index: 1;
     background-color: #2A2E5C;
 }
-.applythelaw {
+/* .applythelaw {
     background-image: url(https://storage.googleapis.com/osp-video/img/applythelaw_bg.png);
     background-position: bottom center;
-    background-size: contain;
-}
+    background-size: cover;
+} */
 .applythelaw .bg-container {
     position: absolute;
     top: 0;
