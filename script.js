@@ -1,3 +1,4 @@
+//<script>
 // <!-- GA4 -->
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -16,11 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
         video.muted = true;
         video.loop = true;
         video.play();
-    // Select all the elements with .exceptional .flexbox
-    var elements = document.querySelectorAll('.exceptional .flexbox');
     
-    // Loop through the NodeList and apply the style to each element
-    elements.forEach(function(element) {
-        element.style.gap = '128px';
+        var exceptionalElements = document.querySelectorAll('.exceptional .flexbox');
+        exceptionalElements.forEach(function(element) {
+            element.style.gap = '128px';
+        });
+        
+        var threeColumnElements = document.querySelectorAll('.threecolumn .flexbox');
+        threeColumnElements.forEach(function(element) {
+            element.style.gap = '128px';
+        });
     });
-});
+//</script>
