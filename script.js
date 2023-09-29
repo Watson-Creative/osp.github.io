@@ -17,7 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
         video.muted = true;
         video.loop = true;
         video.play();
-    
+
+        var applyTheLawElements = document.querySelectorAll('.applythelaw');
+        applyTheLawElements.forEach(function(element) {
+            element.style.backgroundImage = 'url(https://storage.googleapis.com/osp-video/img/applythelaw_bg.png)';
+            element.style.backgroundPosition = 'bottom center';
+            element.style.backgroundSize = 'cover';
+        });
+
         var exceptionalElements = document.querySelectorAll('.exceptional .flexbox');
         exceptionalElements.forEach(function(element) {
             element.style.gap = '128px';

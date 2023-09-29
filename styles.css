@@ -1,5 +1,10 @@
+/*<style>
 /** GLOBAL OVERRIDE **/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Serif:opsz,wght@8..144,700&display=swap');
+*, *:before, *:after {
+    box-sizing: border-box;
+}
 body {
     margin: 0 !important;
     padding: 0 !important;
@@ -76,7 +81,6 @@ button.btn-hack.serv {
     z-index: 1;
     width: 100%;
     align-items: center;
-    /* justify-content: space-evenly; */
     padding: 0;
 }
 /* Apply the Law. Apply Yourself. Apply Today. */
@@ -92,6 +96,12 @@ button.btn-hack.serv {
     margin: 0;
     padding: 0;
     z-index: 1;
+    background-color: #2A2E5C;
+}
+.applythelaw {
+    background-image: url(https://storage.googleapis.com/osp-video/img/applythelaw_bg.png);
+    background-position: bottom center;
+    background-size: contain;
 }
 .applythelaw .bg-container {
     position: absolute;
@@ -384,15 +394,138 @@ button.btn-hack.serv {
     width: 80%;
 }
 /* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+    .exceptional .flexbox,
+    .threecolumn .flexbox {
+        gap: 64px;
+    }
+    .exceptional h2,
+    .modern .text h2,
+    .whatittakes h2,
+    .service h2,
+    .applythelaw h1 {
+        font-size: 45px;
+        line-height: 55px;
+    }
+    .exceptional p,
+    .threecolumn p,
+    .whatittakes p,
+    .service p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .applythelaw .text,
+    .applythelaw .video,
+    .whatittakes .text,
+    .whatittakes .video,
+    .service .flexbox .column {
+        width: 80%;
+        margin: 0 10%;
+    }
+    .applythelaw,
+    .whatittakes {
+        height: auto;
+        padding: 64px 0;
+    }
+    .osp_bike,
+    .modern .bg img {
+        width: 50%;
+    }
+    .service {
+        padding: 128px 0;
+    }
+}
 @media (max-width: 768px) {
-    .flexbox {
-        flex-direction: column;
+    .flexbox, .applythelaw, .whatittakes, .service {
+        display: flex !important;
+        flex-direction: column !important;
     }
-    .applythelaw .text, .applythelaw .video {
-        width: 90%;
-        margin: 0 5%;
+    .applythelaw .text,
+    .applythelaw .video,
+    .whatittakes .text,
+    .whatittakes .video,
+    .service .flexbox .column {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 20px !important; /* You might want to adjust the padding here */
     }
-    br {
-        display: none;
+    .exceptional .flexbox,
+    .threecolumn .flexbox {
+        gap: 32px !important; /* Adjust the gap as per your design */
     }
-}    
+    button.btn-hack {
+        width: 100%;
+        font-size: 18px; /* You might want to adjust the font-size here */
+    }
+    .exceptional h2,
+    .modern .text h2,
+    .whatittakes h2,
+    .service h2,
+    .applythelaw h1 {
+        font-size: 30px; /* Adjust the font-size as per your design */
+        line-height: 40px; /* Adjust the line-height as per your design */
+    }
+    .exceptional p,
+    .threecolumn p,
+    .whatittakes p,
+    .service p {
+        font-size: 16px; /* Adjust the font-size as per your design */
+        line-height: 22px; /* Adjust the line-height as per your design */
+    }
+    .osp_bike,
+    .modern .bg img {
+        width: 100%;
+    }
+    .service {
+        padding: 64px 0; /* Adjust the padding as per your design */
+    }
+}
+@media (max-width: 576px) {
+    .flexbox, .applythelaw, .whatittakes, .service {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: -webkit-flex !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .applythelaw .text,
+    .applythelaw .video,
+    .whatittakes .text,
+    .whatittakes .video,
+    .service .flexbox .column {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 10px !important;
+    }
+    .exceptional .flexbox,
+    .threecolumn .flexbox {
+        gap: none !important;
+    }
+    button.btn-hack {
+        width: 100%;
+        font-size: 16px;
+    }
+    .exceptional h2,
+    .modern .text h2,
+    .whatittakes h2,
+    .service h2,
+    .applythelaw h1 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .exceptional p,
+    .threecolumn p,
+    .whatittakes p,
+    .service p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .osp_bike,
+    .modern .bg img {
+        width: 100%;
+    }
+    .service {
+        padding: 32px 0;
+    }
+}
+/*<style>
