@@ -1,225 +1,39 @@
-<style>
-/** GLOBAL OVERRIDE **/
-body {
-        margin: 0 !important;
-        padding: 0 !important;
-        background-color: #FFFEFE !important;
-        }
-    video::-webkit-media-controls-panel {
-        display: none !important;
-        opacity: 0 !important;
-    }
-    header.or-header, .or-page-title, .or-show-if-side-navigation, .helpfulPoll, #OregonSideNavigation {
-        display: none !important;
-        }
-    .row, .col-md-12, .col-md-9, .col-md-6, .col-md-3, .col-md-2, .col-md-1 {
-        margin: 0 !important;
-        padding: 0 !important;
-    border: none !important;
-        }
-    .col-md-9 {
-        width: 100vw !important;
-        }
-    .or-navbar, .or-navbar-search-wrapper {
-        background-color: #25294F !important;
-        }
-    #main {
-        width: 100vw;
-        margin: 0 !important;
-        padding: 0 !important;
-        }
-    .container {
-        width: 100vw !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        }
-    footer {
-        box-shadow: none !important;
-        padding: 0 !important;
-        background-color: #25294F !important;
-        }
-    main a, footer a, .alert a {
-        color: #ADA076 !important;
-        text-decoration: none !important;
-        }
-    h3, footer li {
-        color: #DEDEDE !important;
-        }
-/* GENERAL CSS */
-    .fullwidth {
-        display: flex !important;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-        }
-    button {
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24px;
-        text-align: center;
-        font-size: 125%;
-        width: 200px;
-        padding: 12px 24px;
-        color: #000000;
-        background-color: #f2b827;
-        border: none;
-        cursor: pointer;
-    }
-    button.serv {
-        background-color: #92A5BA !important;
-        color: #25294F !important;
-    }
-    .flexbox {
-        display: flex;
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 0;
-    }
-/* HEADER */
-    .applythelaw {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        position: relative;
-        overflow: hidden;
-        width: 100vw;
-        height: calc(100vh - 130px);
-        margin: 0;
-        padding: 0;
-        z-index: 1;
-    }
-    .applythelaw .bg-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        overflow: hidden;
-    }
-    .applythelaw .bg-container img {
-        min-width: 100%;
-        min-height: 100%;
-        max-width: none;
-        max-height: none;
-        display: block;
-        margin: auto;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-    }
-    .applythelaw .text {
-        width: 600px;
-        margin-left: 275px;
-    }
-    .applythelaw .video {
-        width: calc(100% - 700px);
-    }
-    .applythelaw h1 {
-        font-family: 'Roboto Serif', Times, serif;
-        font-size: 55px;
-        font-weight: 700;
-        line-height: 65px;
-        text-align: left;
-        margin: 0;
-        color: #FFFEFE;
-    }
-    .applythelaw h1 span {
-        color: #F2B827;
-    }
-    .applythelaw p {
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24px;
-        text-align: left;
-        color: #DEDEDE;
-        margin: 35px 0 70px 0;
-        width: 80%;
-    }
-    .applythelaw .video {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }  
-    .applythelaw .video video {
-        width: 100%;
-        object-fit: cover;
-        border: none;
-    }
-    /* An Exceptional Force Seeking Exceptional Cadets */
-    .exceptional {
-        padding: 100px 50px 100px 50px;
-    }
-    .exceptional h2 {
-        font-family: 'Roboto Serif', Times, serif;
-        font-size: 55px;
-        font-weight: 700;
-        line-height: 65px;
-        text-align: left;
-        letter-spacing: 0px;
-        color: #25294F;
-    }
-    .exceptional p {
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24px;
-        text-align: left;
-        letter-spacing: 0px;
-        color: #000001;
-    }
-    /* Responsive design for smaller screens */
-    @media (max-width: 768px) {
-        .flexbox {
-            flex-direction: column;
-        }
-    
-        .applythelaw .text, .applythelaw .video {
-            width: 90%;
-            margin: 0 5%;
-        }
-    }    
-</style>
 <header class="applythelaw">
     <div class="bg-container">
-        <img src="https://raw.githubusercontent.com/Watson-Creative/osp.github.io/main/img/Mask_Group_1@2x.png" alt="Background Image"/>
+        <img src="https://raw.githubusercontent.com/Watson-Creative/osp.github.io/main/img/applythelaw_bg.png" alt="Background Image"/>
     </div>
     <div class="flexbox">
         <div class="text">
             <h1>Apply the Law.<br/> Apply Yourself.<br/> <span>Apply Today.</span></h1>
             <p>Launch a rewarding and impactful career<br/> as a Trooper with the Oregon State Police.</p>
-            <button class="btn btn-primary" onclick="window.location.href='https://www.oregon.gov/osp/jobs/Pages/Become-a-trooper.aspx'">Apply Now</button>
+            <button class="btn btn-primary btn-hack" onclick="window.location.href='https://www.oregon.gov/osp/jobs/Pages/Become-a-trooper.aspx'">Apply Now</button>
         </div>
         <div class="video">
-            <video id="ospVideo" width="100%">
+            <video id="ospVideo" width="100%" autoplay muted loop>
                 <source src="https://storage.googleapis.com/osp-video/OSP.mp4" type="video/mp4">
             </video>       
-        </div>
+        </div>        
     </div>
 </header>
 <section class="exceptional">
     <div class="flexbox">
         <div>
-            <img src="https://raw.githubusercontent.com/Watson-Creative/osp.github.io/main/img/Mask_Group_3.png" alt="An Exceptional Force Seeking Exceptional Cadets"/>
+            <img src="https://raw.githubusercontent.com/Watson-Creative/osp.github.io/main/img/osp_bike.png" alt="An Exceptional Force Seeking Exceptional Cadets"/>
         </div>
         <div>
             <h2>An Exceptional Force Seeking Exceptional Cadets</h2>
             <p>The Oregon State Police is a modern, multi-disciplined policing agency charged with protecting Oregon’s people, wildlife, and natural resources. We are recruiting exceptional individuals for an exceptional opportunity to build a meaningful, fulfilling career in law enforcement.</p>
-            <button class="btn btn-primary" onclick="window.location.href='https://www.oregon.gov/osp/jobs/Pages/Become-a-trooper.aspx'">Apply Now</button>
+            <button class="btn btn-primary btn-hack" onclick="window.location.href='https://www.oregon.gov/osp/jobs/Pages/Become-a-trooper.aspx'">Apply Now</button>
         </div>
     </div>
 </section>
 <section class="modern">
+    <div class="bg">
+        <img src="https://raw.githubusercontent.com/Watson-Creative/osp.github.io/main/img/vector_oregon_outline.png" alt="Background Image"/>
+    </div>
+    <div class="text"></div>
     <h2>Join Our Modern, Multi-Disciplinary Police Force</h2>
-    <button class="btn btn-primary" onclick="window.location.href='https://www.oregon.gov/osp/jobs/Pages/Become-a-trooper.aspx'">Apply Now</button>
+    <button class="btn btn-primary btn-hack center" onclick="window.location.href='https://www.oregon.gov/osp/jobs/Pages/Become-a-trooper.aspx'">Apply Now</button>
 </section>
 <section class="threecolumn">
     <div class="flexbox">
@@ -242,10 +56,10 @@ body {
         <div class="text">
             <h2>Do You Have What it Takes?</h2>
             <p>Interested in how to become a Trooper? Before we invite you to our training academy, you will need to show you meet the requirements and have the skills needed to succeed as an Oregon State Trooper. Beyond the physical and academic qualifications, this includes possessing the composure, compassion and confidence necessary to serve.</p>
-            <button class="btn btn-primary" onclick="window.location.href='https://www.oregon.gov/osp/jobs/Pages/Become-a-trooper.aspx'">Apply Now</button>
+            <button class="btn btn-primary btn-hack" onclick="window.location.href='https://www.oregon.gov/osp/jobs/Pages/Become-a-trooper.aspx'">Apply Now</button>
         </div>
         <div class="video">
-            <img src="https://raw.githubusercontent.com/Watson-Creative/osp.github.io/main/img/Mask_Group_6.png" alt="Do You Have What it Takes?" />
+            <img src="https://raw.githubusercontent.com/Watson-Creative/osp.github.io/main/img/osp_face.png" alt="Do You Have What it Takes?" />
         </div>
     </div>
 </section>
@@ -254,19 +68,20 @@ body {
         <div>
             <h2>A Natural Next Step for Military Veterans</h2>
             <p>The skills you have gained in service of your country directly transfer to a career in law enforcement. If you are looking to continue your career in service, the Oregon State Police is a perfect fit.</p>
-            <button class="btn btn-primary serv" onclick="window.location.href='https://www.oregon.gov/osp/jobs/Pages/Become-a-trooper.aspx'">Apply Now</button>
+            <button class="btn btn-primary btn-hack serv" onclick="window.location.href='https://www.oregon.gov/osp/jobs/Pages/Become-a-trooper.aspx'">Apply Now</button>
         </div>
         <div>
             <h2>Make a Lateral Transfer</h2>
             <p>Are you already working in another part of law enforcement? Or are you a cop in another state looking to make a lateral transfer? Our pay structure, benefits, and diversity of programs, jobs, and growth opportunities are exceptional.</p>
-            <button class="btn btn-primary serv" onclick="window.location.href='https://www.oregon.gov/osp/jobs/Pages/Become-a-trooper.aspx'">Apply Now</button>
+            <button class="btn btn-primary btn-hack serv" onclick="window.location.href='https://www.oregon.gov/osp/jobs/Pages/Become-a-trooper.aspx'">Apply Now</button>
         </div>
     </div>
 </section>
-<link rel="stylesheet" href="styles.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Serif:opsz,wght@8..144,700&display=swap" rel="stylesheet">
+<!-- STYLING -->
+<link rel="stylesheet" href="styles.css" async>
+<link rel="preconnect" href="https://fonts.googleapis.com" async>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin async>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Serif:opsz,wght@8..144,700&display=swap" rel="stylesheet" async>
 <!-- GA4 -->
 <script async src=“https://www.googletagmanager.com/gtag/js?id=G-VH41JYZ1B0”></script>
 <script>
@@ -288,5 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
     video.autoplay = true;
     video.muted = true;
     video.loop = true;
+    video.play();
 });
 </script>
