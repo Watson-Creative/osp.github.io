@@ -108,7 +108,7 @@ h3, footer li {
     width: 100vw;
     height: calc(100vh - 130px);
     margin: 0;
-    padding: 0;
+    padding: 0 128px;
     z-index: 1;
     background-color: #25294F;
 }
@@ -139,11 +139,10 @@ h3, footer li {
     left: 0;
 }
 .applythelaw .text {
-    width: 600px;
-    margin-left: 275px;
+	width: 40vw;
 }
 .applythelaw .video {
-    width: calc(100% - 700px);
+    width: 40vw;
 }
 .applythelaw h1 {
     font-family: 'Roboto Serif', Times, serif;
@@ -187,7 +186,7 @@ h3, footer li {
     gap: 128px;
 }
 .osp_bike {
-    width: 658px;
+	width: 125vw;
 }
 .osp_bike img {
     width: 100%;
@@ -410,7 +409,12 @@ h3, footer li {
     margin: 35px 0 70px 0;
     width: 80%;
 }
-/* Responsive design for smaller screens */
+/* Responsive design for screens */
+@media (max-width: 1260px) {
+    .osp_bike {
+        width: 150vw;
+    }
+}
 @media (max-width: 1024px) {
     .exceptional .flexbox,
     .threecolumn .flexbox {
@@ -460,6 +464,9 @@ h3, footer li {
         display: flex !important;
         flex-direction: column !important;
     }
+    .flexbox {
+        gap: 28px !important;
+    }
     .applythelaw,
     .exceptional,
     .modern,
@@ -494,8 +501,8 @@ h3, footer li {
         margin: 0;
         padding: 0;
     }
-    .video iframe {
-        margin: 60px 0 0 0;
+    .video.youtube{
+        margin: 60px 0 0 0 !important;
     }
     .exceptional .flexbox,
     .threecolumn .flexbox {

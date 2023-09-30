@@ -58,18 +58,19 @@ document.addEventListener('DOMContentLoaded', function() {
         element.style.backgroundImage = 'url(https://storage.googleapis.com/osp-video/img/applythelaw_bg.png)';
         element.style.backgroundPosition = 'bottom center';
         element.style.backgroundSize = 'cover';
+        element.style.gap = '8vw';
     });
 
     // Apply gap to elements within '.exceptional .flexbox'.
     var exceptionalElements = document.querySelectorAll('.exceptional .flexbox');
     exceptionalElements.forEach(function(element) {
-        element.style.gap = '128px';
+        element.style.gap = '8vw';
     });
         
     // Apply gap to elements within '.threecolumn .flexbox'.
     var threeColumnElements = document.querySelectorAll('.threecolumn .flexbox');
     threeColumnElements.forEach(function(element) {
-        element.style.gap = '128px';
+        element.style.gap = '8vw';
     });
 });
 //</script>
