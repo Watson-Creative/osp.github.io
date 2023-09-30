@@ -460,22 +460,6 @@ h3, footer li {
         display: flex !important;
         flex-direction: column !important;
     }
-    .exceptional h2,
-    .modern .text h2,
-    .whatittakes h2,
-    .service h2,
-    .applythelaw h1 {
-        font-size: 30px;
-        line-height: 40px;
-    }
-    .exceptional p,
-    .threecolumn p,
-    .whatittakes p,
-    .service p {
-        font-size: 16px;
-        line-height: 22px;
-    }
-}
     .applythelaw .text,
     .applythelaw .video,
     .whatittakes .text,
