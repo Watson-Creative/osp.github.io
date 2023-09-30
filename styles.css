@@ -61,23 +61,39 @@ h3, footer li {
     margin: 0;
     padding: 0;
 }
-button.btn-hack {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;
-    font-size: 20px !important;
-    font-weight: 400 !important;
-    line-height: 24px !important;
-    text-align: center !important;
-    font-size: 125% !important;
-    width: 200px !important;
-    padding: 12px 24px !important;
-    color: #000000 !important;
-    background-color: #f2b827 !important;
-    border: none !important;
-    cursor: pointer !important;
+.apply-now-btn {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 125%;
+    width: 200px;
+    padding: 12px 24px;
+    color: #000000;
+    background-color: #f2b827;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
-button.btn-hack.serv {
+.apply-now-btn:active,.apply-now-btn:hover,.apply-now-btn:focus,.apply-now-btn:visited {
+    background-color: #f2b827;
+    color: #000000;
+}
+.apply-now-btn.serv {
     background-color: #92A5BA !important;
     color: #25294F !important;
+}
+.apply-now-btn.serv:active,.apply-now-btn.serv:hover,.apply-now-btn.serv:focus,.apply-now-btn.serv:visited {
+    background-color: #92A5BA !important;
+    color: #25294F !important;
+}
+@media (max-width: 768px) {
+    .apply-now-btn {
+        width: 100%;
+        font-size: 16px;
+    }
 }
 .flexbox {
     display: flex;
@@ -100,13 +116,13 @@ button.btn-hack.serv {
     margin: 0;
     padding: 0;
     z-index: 1;
-    background-color: #2A2E5C;
+    background-color: #25294F;
 }
-/* .applythelaw {
+.applythelaw {
     background-image: url(https://storage.googleapis.com/osp-video/img/applythelaw_bg.png);
     background-position: bottom center;
     background-size: cover;
-} */
+}
 .applythelaw .bg-container {
     position: absolute;
     top: 0;
@@ -457,10 +473,6 @@ button.btn-hack.serv {
     .threecolumn .flexbox {
         gap: 32px !important; /* Adjust the gap as per your design */
     }
-    button.btn-hack {
-        width: 100%;
-        font-size: 18px; /* You might want to adjust the font-size here */
-    }
     .exceptional h2,
     .modern .text h2,
     .whatittakes h2,
@@ -504,10 +516,6 @@ button.btn-hack.serv {
     .exceptional .flexbox,
     .threecolumn .flexbox {
         gap: none !important;
-    }
-    button.btn-hack {
-        width: 100%;
-        font-size: 16px;
     }
     .exceptional h2,
     .modern .text h2,

@@ -11,41 +11,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T8JZT2G2');
 // <!-- Video Player -->
-document.addEventListener('DOMContentLoaded', function() {
-    
-    var video = document.getElementById('ospVideo');
-    
-    var isFirefox = navigator.userAgent.indexOf('Firefox') > -1;
-    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    var isEdge = navigator.userAgent.indexOf('Edg') > -1;
-    var isIE = /*@cc_on!@*/false || !!document.documentMode;
-    
-    // Assume MP4 source by default and apply styles
-    var applyStyles = true;
-    
-    if(isSafari || isChrome) {
-        video.src = 'https://storage.googleapis.com/osp-video/OSP_apply_the_law-1580x1080_hvec.mp4';
+// Define the function to detect Apple devices or Safari.
+function detectAppleDevicesOrSafari() {
+    var ua = navigator.userAgent;
+    var isSafari = /^((?!chrome|android).)*safari/i.test(ua);
+    var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+    return {
+        isApple: isSafari || isIOS
+    };
+}
+
+// Get the video and source elements by ID.
+var video = document.getElementById('ospVideo');
+var source = document.getElementById('videoSource');
+
+// Check if the elements exist.
+if (video && source) {
+    // Set the src and type attributes based on the browser.
+    if (detectAppleDevicesOrSafari().isApple) {
+        source.src = 'https://storage.googleapis.com/osp-video/osp_video_1780x1080.mp4';
+        source.type = 'video/mp4';
     } else {
-        // For browsers viewing MP4 source, do not apply styles
-        video.src = 'https://storage.googleapis.com/osp-video/OSP_apply_the_law-1580x1080.mp4';
-        applyStyles = false;
+        source.src = 'https://storage.googleapis.com/osp-video/osp_video_1780x1080.webm';
+        source.type = 'video/webm';
     }
+
+    // Set video properties.
+    video.autoplay = true;
+    video.muted = true;
+    video.loop = true;
     
-    // Apply inline styles to the elements with class '.applythelaw' only if applyStyles is true
-    // if(applyStyles) {
-        // var applyTheLawElements = document.querySelectorAll('.applythelaw');
-        // applyTheLawElements.forEach(function(element) {
-        //     element.style.backgroundImage = 'url(https://storage.googleapis.com/osp-video/img/applythelaw_bg.png)';
-        //     element.style.backgroundPosition = 'bottom center';
-        //     element.style.backgroundSize = 'cover';
-        // });
-    // }
-    
-    // Apply inline style to body and html
+    // Load and play the video.
+    video.load();
+    video.play();
+}
+// <!-- Dom Loader -->
+// The DOMContentLoaded event listener for other functionalities.
+document.addEventListener('DOMContentLoaded', function() {
+    // Apply inline style to body and html.
     document.body.style.overflowX = 'hidden';
     document.documentElement.style.overflowX = 'hidden'; // html
     
+    // Apply background image to elements with class 'applythelaw'.
     var applyTheLawElements = document.querySelectorAll('.applythelaw');
     applyTheLawElements.forEach(function(element) {
         element.style.backgroundImage = 'url(https://storage.googleapis.com/osp-video/img/applythelaw_bg.png)';
@@ -53,20 +60,16 @@ document.addEventListener('DOMContentLoaded', function() {
         element.style.backgroundSize = 'cover';
     });
 
+    // Apply gap to elements within '.exceptional .flexbox'.
     var exceptionalElements = document.querySelectorAll('.exceptional .flexbox');
     exceptionalElements.forEach(function(element) {
         element.style.gap = '128px';
     });
         
+    // Apply gap to elements within '.threecolumn .flexbox'.
     var threeColumnElements = document.querySelectorAll('.threecolumn .flexbox');
     threeColumnElements.forEach(function(element) {
         element.style.gap = '128px';
     });
-    
-    video.autoplay = true;
-    video.muted = true;
-    video.loop = true;
-    video.load(); // Important: load the video again after changing source
-    video.play();
 });
 //</script>
