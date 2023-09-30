@@ -20,11 +20,9 @@ function detectAppleDevicesOrSafari() {
         isApple: isSafari || isIOS
     };
 }
-
 // Get the video and source elements by ID.
 var video = document.getElementById('ospVideo');
 var source = document.getElementById('videoSource');
-
 // Check if the elements exist.
 if (video && source) {
     // Set the src and type attributes based on the browser.
@@ -35,12 +33,10 @@ if (video && source) {
         source.src = 'https://storage.googleapis.com/osp-video/osp_video_1780x1080.webm';
         source.type = 'video/webm';
     }
-
     // Set video properties.
     video.autoplay = true;
     video.muted = true;
     video.loop = true;
-    
     // Load and play the video.
     video.load();
     video.play();
@@ -63,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-
     // Apply styles to elements with class 'applythelaw'.
     applyStylesToClasses(['.applythelaw'], {
         'backgroundImage': 'url(https://storage.googleapis.com/osp-video/img/applythelaw_bg.png)',
@@ -71,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
         'backgroundSize': 'cover',
         'gap': '8vw',
     });
-
     // Apply styles to elements within '.exceptional .flexbox' and '.threecolumn .flexbox'.
     applyStylesToClasses([
         '.exceptional .flexbox',
@@ -83,5 +77,4 @@ document.addEventListener('DOMContentLoaded', function() {
         'gap': '8vw',
     });
 });
-
 //</script>
