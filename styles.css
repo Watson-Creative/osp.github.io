@@ -289,9 +289,9 @@ h3, footer li {
     position: relative;
     overflow: hidden;
     width: 100vw;
-    height: calc(100vh - 200px);
+    /* height: calc(100vh - 200px); */
     margin: 0;
-    padding: 0;
+    padding: 128px;
     z-index: 1;
 }
 .whatittakes .bg-container {
@@ -314,7 +314,6 @@ h3, footer li {
 }
 .whatittakes .text {
     width: 50%;
-    padding-left: 275px;
 }
 .whatittakes .video {
     width: 600px;
@@ -356,12 +355,11 @@ h3, footer li {
     position: relative;
     overflow: hidden;
     width: 100vw;
-    /* height: 750px; */
     margin: 0;
     padding: 0;
     z-index: 1;
     background-color: #D3D3D0;
-    padding: 192px;
+    padding: 128px;
 }
 .service .bg-container {
     position: absolute;
@@ -382,14 +380,14 @@ h3, footer li {
     opacity: 100%;
 }
 .service .flexbox .column {
-    width: 50%;
+    width: 100%;
 }
-.service .flexbox .column.one {
+/* .service .flexbox .column.one {
     padding-right:128px;
 }
 .service .flexbox .column.two {
     padding-right:128px;
-}
+} */
 .service h2 {
     font-family: 'Roboto Serif', Times, serif;
     font-size: 55px;

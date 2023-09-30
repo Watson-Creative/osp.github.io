@@ -52,25 +52,36 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.style.overflowX = 'hidden';
     document.documentElement.style.overflowX = 'hidden'; // html
     
-    // Apply background image to elements with class 'applythelaw'.
-    var applyTheLawElements = document.querySelectorAll('.applythelaw');
-    applyTheLawElements.forEach(function(element) {
-        element.style.backgroundImage = 'url(https://storage.googleapis.com/osp-video/img/applythelaw_bg.png)';
-        element.style.backgroundPosition = 'bottom center';
-        element.style.backgroundSize = 'cover';
-        element.style.gap = '8vw';
+    // Define a function to apply styles to multiple classes.
+    function applyStylesToClasses(selectors, styles) {
+        selectors.forEach(function(selector) {
+            var elements = document.querySelectorAll(selector);
+            elements.forEach(function(element) {
+                for (var styleProperty in styles) {
+                    element.style[styleProperty] = styles[styleProperty];
+                }
+            });
+        });
+    }
+
+    // Apply styles to elements with class 'applythelaw'.
+    applyStylesToClasses(['.applythelaw'], {
+        'backgroundImage': 'url(https://storage.googleapis.com/osp-video/img/applythelaw_bg.png)',
+        'backgroundPosition': 'bottom center',
+        'backgroundSize': 'cover',
+        'gap': '8vw',
     });
 
-    // Apply gap to elements within '.exceptional .flexbox'.
-    var exceptionalElements = document.querySelectorAll('.exceptional .flexbox');
-    exceptionalElements.forEach(function(element) {
-        element.style.gap = '8vw';
-    });
-        
-    // Apply gap to elements within '.threecolumn .flexbox'.
-    var threeColumnElements = document.querySelectorAll('.threecolumn .flexbox');
-    threeColumnElements.forEach(function(element) {
-        element.style.gap = '8vw';
+    // Apply styles to elements within '.exceptional .flexbox' and '.threecolumn .flexbox'.
+    applyStylesToClasses([
+        '.exceptional .flexbox',
+        '.threecolumn .flexbox',
+        '.whatittakes .flexbox',
+        '.service .flexbox'],{
+        'display': 'flex',
+        'align-items': 'flex-start',
+        'gap': '8vw',
     });
 });
+
 //</script>
