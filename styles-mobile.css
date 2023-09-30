@@ -456,9 +456,28 @@ h3, footer li {
     }
 }
 @media (max-width: 768px) {
+    br {
+        display: none;
+    }
     .flexbox, .applythelaw, .whatittakes, .service {
         display: flex !important;
         flex-direction: column !important;
+    }
+    .exceptional h2,
+    .modern .text h2,
+    .whatittakes h2,
+    .service h2,
+    .applythelaw h1 {
+        font-size: 45px;
+        line-height: 60px;
+    }
+    .applythelaw p,
+    .exceptional p,
+    .threecolumn p,
+    .whatittakes p,
+    .service p {
+        font-size: 28px;
+        line-height: 34px;
     }
     .applythelaw .text,
     .applythelaw .video,
@@ -473,21 +492,6 @@ h3, footer li {
     .threecolumn .flexbox {
         gap: 32px !important; /* Adjust the gap as per your design */
     }
-    .exceptional h2,
-    .modern .text h2,
-    .whatittakes h2,
-    .service h2,
-    .applythelaw h1 {
-        font-size: 30px; /* Adjust the font-size as per your design */
-        line-height: 40px; /* Adjust the line-height as per your design */
-    }
-    .exceptional p,
-    .threecolumn p,
-    .whatittakes p,
-    .service p {
-        font-size: 16px; /* Adjust the font-size as per your design */
-        line-height: 22px; /* Adjust the line-height as per your design */
-    }
     .osp_bike,
     .modern .bg img {
         width: 100%;
@@ -497,6 +501,9 @@ h3, footer li {
     }
 }
 @media (max-width: 576px) {
+    br {
+        display: none;
+    }
     .flexbox, .applythelaw, .whatittakes, .service {
         display: -webkit-box !important;
         display: -ms-flexbox !important;
@@ -516,21 +523,6 @@ h3, footer li {
     .exceptional .flexbox,
     .threecolumn .flexbox {
         gap: none !important;
-    }
-    .exceptional h2,
-    .modern .text h2,
-    .whatittakes h2,
-    .service h2,
-    .applythelaw h1 {
-        font-size: 25px;
-        line-height: 35px;
-    }
-    .exceptional p,
-    .threecolumn p,
-    .whatittakes p,
-    .service p {
-        font-size: 14px;
-        line-height: 18px;
     }
     .osp_bike,
     .modern .bg img {

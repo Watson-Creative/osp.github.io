@@ -89,12 +89,6 @@ h3, footer li {
     background-color: #92A5BA !important;
     color: #25294F !important;
 }
-@media (max-width: 768px) {
-    .apply-now-btn {
-        width: 100%;
-        font-size: 16px;
-    }
-}
 .flexbox {
     display: flex;
     position: relative;
@@ -194,6 +188,9 @@ h3, footer li {
 }
 .osp_bike {
     width: 658px;
+}
+.osp_bike img {
+    width: 100%;
 }
 .exceptional h2 {
     font-family: 'Roboto Serif', Times, serif;
@@ -449,70 +446,90 @@ h3, footer li {
     }
     .osp_bike,
     .modern .bg img {
-        width: 50%;
+        width: 100%;
     }
     .service {
         padding: 128px 0;
     }
 }
 @media (max-width: 768px) {
+    br {
+        display: none;
+    }
     .flexbox, .applythelaw, .whatittakes, .service {
         display: flex !important;
         flex-direction: column !important;
+    }
+    .applythelaw,
+    .exceptional,
+    .modern,
+    .threecolumn,
+    .whatittakes,
+    .service {
+        padding: 40px 20px;
     }
     .exceptional h2,
     .modern .text h2,
     .whatittakes h2,
     .service h2,
     .applythelaw h1 {
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 45px;
+        line-height: 60px;
     }
+    .applythelaw p,
     .exceptional p,
     .threecolumn p,
     .whatittakes p,
     .service p {
-        font-size: 16px;
-        line-height: 22px;
+        width: 100%;
+        font-size: 22px;
+        line-height: 34px;
     }
-}
     .applythelaw .text,
     .applythelaw .video,
     .whatittakes .text,
     .whatittakes .video,
     .service .flexbox .column {
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 0 20px !important; /* You might want to adjust the padding here */
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .video iframe {
+        margin: 60px 0 0 0;
     }
     .exceptional .flexbox,
     .threecolumn .flexbox {
         gap: 32px !important; /* Adjust the gap as per your design */
     }
-    .exceptional h2,
-    .modern .text h2,
-    .whatittakes h2,
-    .service h2,
-    .applythelaw h1 {
-        font-size: 30px; /* Adjust the font-size as per your design */
-        line-height: 40px; /* Adjust the line-height as per your design */
+    .osp_bike {
+        width: 80vw;
     }
-    .exceptional p,
-    .threecolumn p,
-    .whatittakes p,
-    .service p {
-        font-size: 16px; /* Adjust the font-size as per your design */
-        line-height: 22px; /* Adjust the line-height as per your design */
-    }
-    .osp_bike,
     .modern .bg img {
         width: 100%;
     }
     .service {
         padding: 64px 0; /* Adjust the padding as per your design */
     }
+    .applythelaw .video {
+        display: block;
+        align-items: center;
+        padding-top: 60px !important;
+    }
+    .apply-now-btn {
+        display: block;
+        width: 220px !important;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .service .flexbox .column.one,
+    .service .flexbox .column.two {
+        padding: 20px;
+    }
 }
 @media (max-width: 576px) {
+    br {
+        display: none;
+    }
     .flexbox, .applythelaw, .whatittakes, .service {
         display: -webkit-box !important;
         display: -ms-flexbox !important;
@@ -526,34 +543,26 @@ h3, footer li {
     .whatittakes .video,
     .service .flexbox .column {
         width: 100% !important;
-        margin: 0 !important;
-        padding: 0 10px !important;
+        margin: 0;
+        padding: 0 10px;
     }
     .exceptional .flexbox,
     .threecolumn .flexbox {
         gap: none !important;
     }
-    .exceptional h2,
-    .modern .text h2,
-    .whatittakes h2,
-    .service h2,
-    .applythelaw h1 {
-        font-size: 25px;
-        line-height: 35px;
+    .osp_bike {
+        width: 80vw;
     }
-    .exceptional p,
-    .threecolumn p,
-    .whatittakes p,
-    .service p {
-        font-size: 14px;
-        line-height: 18px;
-    }
-    .osp_bike,
     .modern .bg img {
         width: 100%;
     }
     .service {
         padding: 32px 0;
     }
+    .applythelaw .video {
+        display: block;
+        align-items: center;
+        padding-top: 60px !important;
+    }  
 }
-/*<style>
+/*</style>
