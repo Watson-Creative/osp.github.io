@@ -11,37 +11,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T8JZT2G2');
 // <!-- Video Player -->
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
     console.log('Start video script.');
+    
     function detectSafari() {
         var ua = navigator.userAgent;
         var isSafari = ua.indexOf('Safari') > -1 && ua.indexOf('Chrome') === -1;
-        console.log('Is Safari: ', isSafari);
+        console.log('Is Safari: ', isSafari); 
         return isSafari;
     }
-    
+
     var video = document.getElementById('ospVideo');
     var source = document.getElementById('videoSource');
-    
+
     if (video && source) {
         console.log('Video and Source exist');
-        // Ensure video properties
         video.autoplay = true;
         video.muted = true;
         video.loop = true;
-        
+
         if (detectSafari()) {
             console.log('Safari!!!');
             source.src = 'https://storage.googleapis.com/osp-video/osp_video_1780x1080.mp4';
             source.type = 'video/mp4';
-            video.load(); // Reload video after changing source
+            video.load(); 
         }
         video.play();
     } else {
         console.log('Video or Source does not exist');
     }
     console.log('End video script.');
-});
+})();
 // <!-- Dom Loader -->
 document.addEventListener('DOMContentLoaded', function() {
     // Apply inline style to body and html.
