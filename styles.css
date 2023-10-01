@@ -446,7 +446,6 @@ h3, footer li {
         height: auto;
         padding: 64px 0;
     }
-    .osp_bike,
     .modern .bg img {
         width: 100%;
     }
@@ -454,8 +453,11 @@ h3, footer li {
         padding: 128px 0;
     }
 }
-@media (max-width: 768px) {
-    br {
+@media (max-width: 812px) {
+    br.hide {
+        display: none;
+    }
+    .applythelaw .flexbox .video {
         display: none;
     }
     .flexbox, .applythelaw, .whatittakes, .service {
@@ -467,19 +469,32 @@ h3, footer li {
     }
     .applythelaw,
     .exceptional,
-    .modern,
     .threecolumn,
     .whatittakes,
     .service {
         padding: 40px 20px;
+    }
+    .modern {
+        padding: 40px;
+        height: 100vmin;
+    }
+    .modern .bg {
+        position: absolute;
+        z-index: 0;
+        overflow: hidden;
+        height: 100vmin;
+    }
+    .modern .bg img {
+        height: 100vmin;
+        width: unset;
     }
     .exceptional h2,
     .modern .text h2,
     .whatittakes h2,
     .service h2,
     .applythelaw h1 {
-        font-size: 45px;
-        line-height: 60px;
+        font-size: 40px;
+        line-height: 55px;
     }
     .applythelaw p,
     .exceptional p,
@@ -507,7 +522,7 @@ h3, footer li {
         gap: 32px !important; /* Adjust the gap as per your design */
     }
     .osp_bike {
-        width: 80vw;
+        width: 100%;
     }
     .modern .bg img {
         width: 100%;
@@ -532,9 +547,6 @@ h3, footer li {
     }
 }
 @media (max-width: 576px) {
-    br {
-        display: none;
-    }
     .flexbox, .applythelaw, .whatittakes, .service {
         display: -webkit-box !important;
         display: -ms-flexbox !important;
@@ -543,7 +555,6 @@ h3, footer li {
         flex-direction: column !important;
     }
     .applythelaw .text,
-    .applythelaw .video,
     .whatittakes .text,
     .whatittakes .video,
     .service .flexbox .column {
@@ -556,18 +567,21 @@ h3, footer li {
         gap: none !important;
     }
     .osp_bike {
-        width: 80vw;
+        width: 100%;
+    }
+    .modern .bg {
+        position: absolute;
+        z-index: 0;
+        overflow: hidden;
+        width: 100vmin;
+        height: unset;
     }
     .modern .bg img {
-        width: 100%;
+        height: unset;
+        width: 100vmin;
     }
     .service {
         padding: 32px 0;
-    }
-    .applythelaw .video {
-        display: block;
-        align-items: center;
-        padding-top: 60px !important;
-    }  
+    } 
 }
 /*</style>

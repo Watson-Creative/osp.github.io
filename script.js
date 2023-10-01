@@ -11,38 +11,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T8JZT2G2');
 // <!-- Video Player -->
-// Define the function to detect Apple devices or Safari.
-function detectAppleDevicesOrSafari() {
-    var ua = navigator.userAgent;
-    var isSafari = /^((?!chrome|android).)*safari/i.test(ua);
-    var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
-    return {
-        isApple: isSafari || isIOS
-    };
-}
-// Get the video and source elements by ID.
-var video = document.getElementById('ospVideo');
-var source = document.getElementById('videoSource');
-// Check if the elements exist.
-if (video && source) {
-    // Set the src and type attributes based on the browser.
-    if (detectAppleDevicesOrSafari().isApple) {
-        source.src = 'https://storage.googleapis.com/osp-video/osp_video_1780x1080.mp4';
-        source.type = 'video/mp4';
-    } else {
-        source.src = 'https://storage.googleapis.com/osp-video/osp_video_1780x1080.webm';
-        source.type = 'video/webm';
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Start video script.');
+    function detectSafari() {
+        var ua = navigator.userAgent;
+        var isSafari = ua.indexOf('Safari') > -1 && ua.indexOf('Chrome') === -1;
+        console.log('Is Safari: ', isSafari);
+        return isSafari;
     }
-    // Set video properties.
-    video.autoplay = true;
-    video.muted = true;
-    video.loop = true;
-    // Load and play the video.
-    video.load();
-    video.play();
-}
+    
+    var video = document.getElementById('ospVideo');
+    var source = document.getElementById('videoSource');
+    
+    if (video && source) {
+        console.log('Video and Source exist');
+        // Ensure video properties
+        video.autoplay = true;
+        video.muted = true;
+        video.loop = true;
+        
+        if (detectSafari()) {
+            console.log('Safari!!!');
+            source.src = 'https://storage.googleapis.com/osp-video/osp_video_1780x1080.mp4';
+            source.type = 'video/mp4';
+            video.load(); // Reload video after changing source
+        }
+        video.play();
+    } else {
+        console.log('Video or Source does not exist');
+    }
+    console.log('End video script.');
+});
 // <!-- Dom Loader -->
-// The DOMContentLoaded event listener for other functionalities.
 document.addEventListener('DOMContentLoaded', function() {
     // Apply inline style to body and html.
     document.body.style.overflowX = 'hidden';
