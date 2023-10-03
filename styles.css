@@ -141,7 +141,7 @@ h3, footer li {
 	width: 40vw;
 }
 .applythelaw .video {
-    width: 40vw;
+    width: 60vw;
 }
 .applythelaw h1 {
     font-family: 'Roboto Serif', Times, serif;
@@ -209,7 +209,7 @@ h3, footer li {
     text-align: left;
     letter-spacing: 0px;
     color: #000000;
-    margin-bottom: 64px;
+    margin: 35px 0 70px 0;
 }
 /* Join Our Modern, Multi-Disciplinary Police Force */
 .modern {
@@ -248,6 +248,7 @@ h3, footer li {
     text-align: center;
     letter-spacing: 0px;
     color: #25294F;
+    margin-bottom: 35px;
     text-shadow:
         -2px -2px 0 #92A5BA,
         2px -2px 0 #92A5BA,
