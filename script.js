@@ -42,6 +42,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     console.log('End video script.');
 })();
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('protostarsVideo').controls = true;
+});
 // <!-- Dom Loader -->
 document.addEventListener('DOMContentLoaded', function() {
     // Apply inline style to body and html.
