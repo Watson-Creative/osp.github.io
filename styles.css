@@ -587,4 +587,7 @@ h3, footer li {
         padding: 32px 0;
     } 
 }
+div.video.youtube iframe html body.date-20231004.en_US.ltr.site-center-aligned.site-as-giant-card.gecko.gecko-109 div#player div#movie_player.html5-video-player.ytp-hide-controls.ytp-exp-bottom-control-flexbox.ytp-title-enable-channel-logo.ytp-embed.ytp-embed-playlist.unstarted-mode.ytp-pause-overlay-controls-hidden div.ytp-chrome-top.ytp-show-cards-title {
+    display: none !important;
+}
 /*</style>
