@@ -385,12 +385,6 @@ h3, footer li {
 .service .flexbox .column {
     width: 100%;
 }
-/* .service .flexbox .column.one {
-    padding-right:128px;
-}
-.service .flexbox .column.two {
-    padding-right:128px;
-} */
 .service h2 {
     font-family: 'Roboto Serif', Times, serif;
     font-size: 55px;
@@ -614,6 +608,10 @@ h3, footer li {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+} @media (max-width: 812px) {
+    .steps {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
 }
 .steps .row {
     grid-column: 1 / -1;
@@ -668,6 +666,9 @@ h3, footer li {
 .faq .button {
     text-align: center !important;
     margin: 62px 0;
+} @media (max-width: 812px) {
+    .faq { padding: 24px;}
+    .faq .text, .faq .button { margin: 24px 0;}
 }
 .faq h2 {
     font-family: 'Roboto Serif', Times, serif;
