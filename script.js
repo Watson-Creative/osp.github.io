@@ -716,9 +716,17 @@ function addCSS() {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
-    } @media (max-width: 812px) {
+    } 
+    .step-column {
+        margin: 12px 0px;   
+       }
+    @media (max-width: 812px) {
         .steps {
-            grid-template-columns: 1fr; /* Single column layout */
+            display: block !important;
+            grid-template-columns: 1fr !important;
+        }
+        .step-column {
+         margin: 36px 24px;   
         }
     }
     .steps .row {
@@ -735,9 +743,6 @@ function addCSS() {
         color: #25294F;
         margin: 0px;
         margin-bottom: 24px;
-    }
-    .column {
-        margin: 12px 0;
     }
     .column.last {
         justify-self: center;
