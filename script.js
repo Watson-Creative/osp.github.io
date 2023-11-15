@@ -178,7 +178,7 @@ function addCSS() {
         font-size: 125%;
         width: 200px;
         padding: 12px 24px;
-        color: #000000;
+        color: #000000 !important;
         background-color: #f2b827;
         border: none;
         border-radius: 4px;
@@ -186,7 +186,7 @@ function addCSS() {
     }
     .apply-now-btn:active,.apply-now-btn:hover,.apply-now-btn:focus,.apply-now-btn:visited {
         background-color: #f2b827;
-        color: #000000;
+        color: #000000 !important;
     }
     .apply-now-btn.serv {
         background-color: #92A5BA !important;
@@ -702,7 +702,7 @@ function addCSS() {
         text-decoration: none;
         font-size: 125%;
         padding: 24px;
-        color: #000000;
+        color: #000000 !important;
         background-color: #f2b827;
     }
     .steps-section {
@@ -828,7 +828,7 @@ function addCSS() {
         font-size: 20px;
         line-height: 24px;
         padding-right: 18px;
-    }  
+    }
     // END CSS
     `;
     var style = document.createElement('style');
