@@ -274,7 +274,7 @@ h3, footer li {
     letter-spacing: 0px;
     color: #25294F !important;
 }
-.threecolumn p {
+.threecolumn p {    
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -460,9 +460,9 @@ h3, footer li {
     br.hide {
         display: none;
     }
-    .applythelaw .flexbox .video {
+    /* .applythelaw .flexbox .video {
         display: none;
-    }
+    } */
     .flexbox, .applythelaw, .whatittakes, .service {
         display: flex !important;
         flex-direction: column !important;
@@ -589,5 +589,130 @@ h3, footer li {
     .service {
         padding: 32px 0;
     } 
+}
+/* Add or modify these styles in your styles.css file */
+.deadline {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 125%;
+    padding: 24px;
+    color: #000000;
+    background-color: #f2b827;
+}
+.steps-section {
+    background-color: #f2f2f2;
+    padding: 96px 0px;
+}
+.steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 48px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.steps .row {
+    grid-column: 1 / -1;
+}
+.steps .button {
+    text-align: center;
+    margin-top: 48px;
+}
+.steps .title {
+    text-align: center;
+    font: normal normal bold 55px/65px Roboto Serif;
+    letter-spacing: 0px;
+    color: #25294F;
+    margin: 0px;
+    margin-bottom: 24px;
+}
+.column {
+    margin: 12px 0;
+}
+.column.last {
+    justify-self: center;
+    grid-column: auto / span 2;
+}
+.steps h4 {
+    font: normal normal bold 35px/40px Roboto Serif;
+    letter-spacing: 0px;
+    color: #92A5BA;
+    margin: 0;
+}
+.steps p, .steps li {
+    font: normal normal normal 20px/24px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    margin: 0;
+    margin-top: 24px;
+}
+.faq {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    margin: 0;
+    padding: 128px;
+    z-index: 1;
+}
+.faq .text {
+    margin: 62px 0;
+}
+.faq .button {
+    text-align: center !important;
+    margin: 62px 0;
+}
+.faq h2 {
+    font-family: 'Roboto Serif', Times, serif;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 65px;
+    text-align: left;
+    margin: 0;
+    color: #FFF;
+}
+.faq h3 {
+    font-family: 'Roboto Serif', Times, serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 55px;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 48px;
+    color: #92A5BA !important;
+}
+.faq p {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #DEDEDE;
+    margin: 12px 0;
+}
+.faq li {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+	line-height: 32px;
+    text-align: left;
+    color: #DEDEDE;
+    margin: 12px 0;
+    list-style: none;
+}
+.faq li::before {
+	content: '●';
+	left: 0;
+	color: #f2b827;
+	font-size: 20px;
+	line-height: 24px;
+	padding-right: 18px;
 }
 /*</style>
